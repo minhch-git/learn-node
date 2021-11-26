@@ -1,2 +1,7 @@
 export * as authValidation from './auth.validation'
 export * as userValidation from './user.validation'
+export * as sinhVienValidation from './sinh-vien.validation'
+export * as ketQuaValidation from './ket-qua.validation'
+export * as khoaValidation from './khoa.validation'
+export * as lopValidation from './lop.validation'
+export * as monHocValidation from './mon-hoc.validation'

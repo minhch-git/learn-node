@@ -1,0 +1,6 @@
+export * from './user.model'
+export * from './sinh-vien.model'
+export * from './lop.model'
+export * from './khoa.model'
+export * from './mon-hoc.model'
+export * from './ket-qua.model'

@@ -18,7 +18,6 @@ export default (req, res, next) => {
 
   // file size
   if (req.file.size > config.avatar_limit_size) {
-    console.log(config.avatar_limit_size)
     // remove file
     fs.unlinkSync(image)
     throw new createHttpError.BadRequest('This file is too large (Max: 1MB ).')

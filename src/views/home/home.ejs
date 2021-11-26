@@ -1,0 +1,45 @@
+<% extend('../main') %>
+<!-- -------------------------------------------- -->
+<!-- --------------- HOME PAGE ------------------ -->
+<!-- -------------------------------------------- -->
+<div class="home">
+  <!-- Content -->
+  <div class="mt-4">
+    <table class="table text-white">
+      <thead class="thead-primary">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Tên Lớp</th>
+          <th scope="col">MaKhoa</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if(lops.length <= 0){ %>
+        <tr>
+          <td colspan="8" class="text-center">
+            <h4 class="text-primary">Không có lớp nào?</h4>
+            <a href="/api/tao-lop">Thêm 1 lớp mới</a>
+          </td>
+        </tr>
+        <% } else { %> <% lops.forEach(lop => {%>
+        <tr>
+          <td><%- lop.id %></td>
+          <td><%- lop.tenLop%></td>
+          <td><%- lop.maKhoa%></td>
+          <td>
+            <div class="d-flex">
+              <a
+                href="/api/cap-nhap-lop/<%- lop.id%>"
+                class="btn btn-info text-white"
+                >Update</a
+              >
+              <a href="/api/xoa-lop/<%- lop.id%>" class="btn btn-danger">Xóa</a>
+            </div>
+          </td>
+        </tr>
+        <%})%> <% } %>
+      </tbody>
+    </table>
+  </div>
+</div>

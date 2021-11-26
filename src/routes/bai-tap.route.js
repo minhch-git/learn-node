@@ -1,0 +1,31 @@
+import { Router } from 'express'
+import { baiTapController } from '../../controllers'
+const router = new Router()
+
+router.get('/cau-1', baiTapController.getCau1)
+router.get('/cau-2', baiTapController.getCau2)
+router.get('/cau-3', baiTapController.getCau3)
+router.get('/cau-4', baiTapController.getCau4)
+router.get('/cau-5', baiTapController.getCau5)
+router.get('/cau-6', baiTapController.getCau6)
+router.get('/cau-7', baiTapController.getCau7)
+router.get('/cau-8', baiTapController.getCau8)
+router.get('/cau-9', baiTapController.getCau9)
+router.get('/cau-10', baiTapController.getCau10)
+router.get('/cau-11', baiTapController.getCau11)
+router.get('/cau-12', baiTapController.getCau12)
+router.get('/cau-13', baiTapController.getCau13)
+router.get('/cau-14', baiTapController.getCau14)
+router.get('/cau-15', baiTapController.getCau15)
+router.get('/cau-16', baiTapController.getCau16)
+router.get('/cau-17', baiTapController.getCau17)
+router.get('/cau-18', baiTapController.getCau18)
+router.get('/cau-19', baiTapController.getCau19)
+router.get('/cau-20', baiTapController.getCau20)
+router.get('/cau-21', baiTapController.getCau21)
+router.get('/cau-22', baiTapController.getCau22)
+router.get('/cau-23', baiTapController.getCau23)
+router.get('/cau-24', baiTapController.getCau24)
+router.get('/cau-25', baiTapController.getCau25)
+
+export default router

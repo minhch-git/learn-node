@@ -4,8 +4,7 @@ export PORT=8888
 
 
 # URL of the Mongo DB
-export MONGODB_URL="mongodb://127.0.0.1:27017/mern-auth"
-# export MONGODB_URL="mongodb+srv://<username>:<password>@cluster0.wqu70.mongodb.net/<database_name>?retryWrites=true&w=majority"
+export MONGODB_URL="mongodb+srv://learnnodejs:learnnodejs@cluster0.77tbw.mongodb.net/learnnodejs?retryWrites=true&w=majority"
 
 
 # JWT

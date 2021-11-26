@@ -2,8 +2,7 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcryptjs'
 import { roles } from '../config/roles'
 import { transValidations } from '../../lang/en'
-import toJSON from './plugins/toJson'
-import paginate from './plugins/paginate'
+import { paginate, toJSON } from './plugins'
 
 const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 const passwordRegex = /^(?=.*\d)(?=.*[a-zA-Z]).{6,}$/
@@ -86,4 +85,4 @@ userSchema.plugin(paginate)
  */
 const User = mongoose.model('User', userSchema)
 
-export default User
+export { User }

@@ -1,3 +1,12 @@
 export * as authController from './auth.controller'
 export * as userController from './user.controller'
 export * as uploadController from './upload.controller'
+export * as sinhVienController from './sinh-vien.controller'
+export * as lopController from './lop.controller'
+export * as khoaController from './khoa.controller'
+export * as monHocController from './mon-hoc.controller'
+export * as ketQuaController from './ket-qua.controller'
+export * as baiTapController from './bai-tap.controller'
+export * as chiuCamMinhController from './2_ChiuCamMinh_13.controller'
+
+export * as baiKiemTraController from './bai-kiem-tra.controller'

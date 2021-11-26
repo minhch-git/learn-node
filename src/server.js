@@ -19,11 +19,16 @@ import errorHandler from './middlewares/error'
 import routes from './routes/_index'
 import { authLimiter } from './config/rateLimit'
 import config from './config/config'
+import configViewEngine from './config/viewEngine'
+
 // connect to database
 db.connect()
 
 // init app
 const app = express()
+
+// Templates engine
+configViewEngine(app, path.join(__dirname, 'views'))
 
 // body parser
 app.use(express.json())
@@ -64,7 +69,7 @@ app.use(passport.initialize())
 passport.use('jwt', jwtStrategy)
 
 // Set static folder
-app.use(express.static(path.join(__dirname, 'src', 'uploads')))
+app.use(express.static(path.join(__dirname, 'public')))
 
 // api routes
 app.use('/api', routes)
@@ -79,7 +84,10 @@ app.use(errorHandler)
 
 const server = app.listen(
   app_port,
-  logger.info(`Server running in ${node_env} mode on port ${app_port}`.cyan)
+  logger.info(
+    `Server running in ${node_env} mode at http://localhost:${app_port}/api`
+      .cyan.underline
+  )
 )
 
 // Handle unhandled promise rejections

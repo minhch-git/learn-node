@@ -22,6 +22,14 @@ const createUser = async userBody => {
  * @returns {Promise<users>}
  */
 const queryUsers = async (filter, options) => {
+  const customLabels = {
+    docs: 'users',
+    page: 'page',
+    totalPages: 'totalPages',
+    limit: 'limit',
+    totalDocs: 'totalUsers',
+  }
+  options = { ...options, customLabels }
   const users = await User.paginate(filter, options)
   return users
 }
